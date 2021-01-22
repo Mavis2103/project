@@ -3,87 +3,98 @@
   margin: 0;
   box-sizing: border-box;
 }
-
 h2,
 p {
   font-family: inherit;
 }
-
+$color-main:#007e7f;
+$color-bg: #e1e2e4;
+$color-gradient: #93832f, #f4eda7;
+$heigh_header_title: 50px;
+$border-frame: 2px solid $color-main;
+$border-textbox: 3px solid $color-main;
+$border-header: 3px solid $color-main;
+$box-w: 10px;
+$box-h: 15px;
+$line-box-w: 150px;
+$triangle: 30px;
+$border-gradient: 5px solid linear-gradient(to bottom, red, black);
 .frame {
   width: 620px;
-  padding: 13px;
-  margin: auto;
+  padding: 13px ;
+  margin:auto;
 }
-
 .frame--center {
   margin: 25px;
 }
-
 .frame__border {
   display: inline-block;
   height: 100%;
-  border: 2px solid #007e7f;
+  border: $border-frame;
 }
 
 /* HEADER */
 .header {
+  // padding: 0 20px;
   text-align: center;
+  
 }
-
 .header__title {
   display: inline-block;
   text-align: center;
   position: relative;
   margin: 20px auto;
-  height: 50px;
+  // border-top: $border-header;
+  // border-bottom: $border-header;
+  height: $heigh_header_title;
 }
 
 /* two-box */
 .two-box {
   width: 100%;
   position: absolute;
-  bottom: -9.0909090909px;
+  bottom: (-1 * ($box-h / 1.65));
 }
-
 .two-box .box {
-  width: 10px;
-  height: 15px;
-  border: 3px solid #007e7f;
+  width: $box-w;
+  height: $box-h;
+  border: $border-header;
 }
 
 /* position box for header */
 .header__title .two-box:nth-child(1) {
-  top: -9.0909090909px;
+  top: (-1 * ($box-h / 1.65));
 }
-
 .header__title .two-box:nth-child(2) {
-  bottom: -9.0909090909px;
+  bottom: (-1 * ($box-h / 1.65));
 }
-
 .header__title .two-box .box:nth-child(1),
 .header__title .two-box .box:nth-child(3) {
-  margin-left: -10px;
+  margin-left: (-1 * $box-w);
 }
-
 .header__title .two-box .box:nth-child(2),
 .header__title .two-box .box:nth-child(4) {
-  margin-right: -10px;
+  margin-right: (-1 * $box-w);
 }
 
 /* HEADER-CONTENT */
+// .header__content p {
+//   text-align: left;
+//   color: $color-main;
+//   font-weight: bold;
+//   text-indent: 20px;
+// }
 .header__content p:before {
   content: open-quote;
 }
-
 .header__content p:after {
   content: close-quote;
 }
 
 /* CONTENT */
-.content {
+.content{
   height: 100%;
 }
-
 /* option1 */
 .content.option1,
 .content.option2,
@@ -91,66 +102,61 @@ p {
 .content.option4 {
   padding: 0 10px;
 }
-
 .content .row {
   float: left;
   overflow: hidden;
   height: 100%;
 }
-
 .content .row:not(:last-child) {
   margin-bottom: 20px;
 }
-
 .content .row .col p {
   padding-right: 20px;
 }
-
 .content .row .col {
-  float: left;
+  float:left;
   max-width: 50%;
 }
-
 .bg-gray {
-  background-image: url("./image/background.png");
+  background-image: url('./image/background.png');
   background-size: 100%;
 }
 
+.line-box {
+  $box-w: 8px;
+  $box-h: 10px;
+}
 .line-box .two-box .box:nth-child(1) {
   float: left;
-  margin-left: -10px;
+  margin-left: (-1 * $box-w);
 }
-
 .line-box .two-box .box:nth-child(2) {
-  float: right;
-  margin-right: -10px;
+  float:right;
+  margin-right: (-1 * $box-w);
 }
-
 .line-box {
   float: left;
   position: relative;
-  width: 150px;
+  width: $line-box-w;
   margin: 5px auto 10px;
-  height: 15px;
-  border-bottom: 3px solid #007e7f;
+  height: $box-h;
+  border-bottom: $border-header;
 }
 
-svg {
-  stroke: #007e7f;
+svg{
+  stroke: $color-main;
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
   fill: none;
 }
-
-.content.option1 .row:last-child {
+.content.option1 .row:last-child{
   width: 100%;
   margin: 0 0 10px;
-  border: 3px solid #007e7f;
+  border: $border-textbox;
   position: relative;
   outline: none;
 }
-
-@page {
+@page{
   size: a4;
 }
