@@ -20,7 +20,7 @@ $line-box-w: 150px;
 $triangle: 30px;
 $border-gradient: 5px solid linear-gradient(to bottom, red, black);
 .frame {
-  width: 620px;
+  width: 900px;
   padding: 13px ;
   margin:auto;
 }
@@ -28,11 +28,17 @@ $border-gradient: 5px solid linear-gradient(to bottom, red, black);
   margin: 25px;
 }
 .frame__border {
+  width: 100%;
   display: inline-block;
   height: 100%;
   border: $border-frame;
 }
-
+.name__datebirth{
+  text-align:center;color: #0e3849;
+  font-family: "SVN-Book Antiqua";
+  font-size:22pt;
+  margin-top: 20px;
+}
 /* HEADER */
 .header {
   // padding: 0 20px;
@@ -95,7 +101,6 @@ $border-gradient: 5px solid linear-gradient(to bottom, red, black);
 .content{
   height: 100%;
 }
-/* option1 */
 .content.option1,
 .content.option2,
 .content.option3,
@@ -105,21 +110,146 @@ $border-gradient: 5px solid linear-gradient(to bottom, red, black);
 .content .row {
   float: left;
   overflow: hidden;
-  height: 100%;
+  // height: 100%;
 }
 .content .row:not(:last-child) {
   margin-bottom: 20px;
 }
 .content .row .col p {
-  padding-right: 20px;
+  // padding-right: 20px;
 }
 .content .row .col {
   float:left;
   max-width: 50%;
 }
-.bg-gray {
-  background-image: url('./image/background.png');
-  background-size: 100%;
+
+/* option1 */
+.content.option1 .row:last-child{
+  width: 100%;
+  margin: 0 0 10px;
+  border: $border-textbox;
+  position: relative;
+  outline: none;
+  background:url('./image/bg.png');
+  background-size:100%;
+}
+/* option2 */
+.bg-option2{
+  float: left;
+  background:url('./image/bg.png');
+  background-size:70%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.content.option2{
+  background:url('./image/page21-bg.png');
+  background-size:100%;
+}
+.content.option2 .row{
+  padding:20px;
+  margin: 0 0 10px;
+  border: $border-textbox;
+}
+/* option3 */
+.bg-option3{
+  float: left;
+  background:url('./image/bg.png');
+  background-size:70%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.content.option3 .row{
+  width: 100%;
+  display:flex;
+  align-items:center;
+  overflow: unset;
+}
+.content.option3 .row:nth-child(2){
+  flex-direction: row-reverse;
+}
+.content.option3 .content__cmt{
+  position: relative;
+  width: 600px;
+  min-height: 130px;
+  margin: 30px 0;
+  padding: 20px;
+  background-color: rgba(214, 197, 154,0.5);
+}
+.content.option3 .avatar__cmt{
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border: 5px solid #beab5c;
+  background-color: #e3e3e4;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.content.option3 .row:last-child{
+  margin-bottom:60px
+}
+/* option4 */
+.content.option4 .row:first-child{
+  float: left;
+  background:url('./image/page27-image.png');
+  background-size:80%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.content.option4 .row img{
+  width: 60%;margin:0 auto 20px;opacity: 0.3;
+}
+.content.option4 .row p{
+  font-family: "SVN-Book Antiqua";
+  font-weight: 700;
+  font-size:32pt;
+  color: $color-main;
+}
+
+/* option5 */
+
+.bg-option5{
+  height: 1038px;
+  width: 100%;
+  background:url('./image/page4.png');
+  background-size:100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 39.5px;
+}
+.option5.content .row{
+  width: 100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.option5.content .row .col{
+  width: 232px;
+  max-height: 98px;
+  // background-color: black;
+  margin: 61.5px 17.5px;
+  overflow: hidden;
+}
+.option5.content .row:not(:first-child){
+  margin-top:17.5px;
+  // background-color: red;
+}
+.option5.content .row .col p {
+  text-align: center;
+  line-height:98px;
+  font-family: "SVN-Book Antiqua";
+  font-weight: 700;
+  font-size:52pt;
+  color: $color-main;
+}
+//////////////////////////////////////////////
+.bg-gray{
+  background:url('./image/background.png');
+  background-size:100%;
 }
 
 .line-box {
@@ -150,13 +280,10 @@ svg{
   stroke-linejoin: round;
   fill: none;
 }
-.content.option1 .row:last-child{
-  width: 100%;
-  margin: 0 0 10px;
-  border: $border-textbox;
-  position: relative;
-  outline: none;
-}
 @page{
   size: a4;
+}
+@font-face{
+  font-family: SVN-Avo;
+  src: url('http://duongthao.edu.vn/public/era/SVN-Avo.ttf');
 }
