@@ -454,13 +454,36 @@ p.name span span:last-child,p.datebirth span span:last-child{
 
 /* option9 */
 .option9{
+  width: 900px;
+  margin:0 auto;
   text-align: center;
-  .bg-option9{
-    height: 1033px;
-    background:url('./image/page1-bg2.png'),url('./image/page1-bg1.png');
+  height: 1033px;
+    background:url('./image/page1-bg1.png');
     // background: url('./image/page1-bg2.png');
-    background-repeat: no-repeat,no-repeat;
-    background-size: cover,100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  .bg-option9{
+    position: relative;
+    height: 1033px;
+    background:url('./image/page1-bg2.png');
+    // background: url('./image/page1-bg2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2;
+  }
+  .bg-option9::after{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1033px;
+    width: 900px;
+    z-index: -1;
+    background:url('./image/page1-bg3.png');
+    // background: url('./image/page1-bg2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
   }
   p{
     font-family:"SVN-Avo";
@@ -517,8 +540,18 @@ svg{
 @page{
   size: a4;
 }
-@font-face{
-  font-family: SVN-Avo;
-  src: url('http://duongthao.edu.vn/public/era/SVN-Avo.ttf');
-  font-weight:bold;
-}
+// @font-face{
+//   font-family: SVN-Avo;
+//   src: url('http://duongthao.edu.vn/public/era/SVN-Avo.ttf');
+//   font-weight:bold;
+// }
+// @font-face{
+//   font-family: SVN-Book Antiqua;
+//   src: url('http://duongthao.edu.vn/public/era/SVN-Avo.ttf');
+//   font-weight:bold;
+// }
+// @font-face{
+//   font-family: SVN-Berkshire Swash;
+//   src: url('http://duongthao.edu.vn/public/era/SVN-Avo.ttf');
+//   font-weight:bold;
+// }
