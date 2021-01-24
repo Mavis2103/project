@@ -133,6 +133,10 @@ $border-gradient: 5px solid linear-gradient(to bottom, red, black);
   background:url('./image/bg.png');
   background-size:100%;
 }
+.option1 p{
+  font-family: "SVN-Book Antiqua";
+  font-size:16pt;
+}
 /* option2 */
 .bg-option2{
   float: left;
@@ -150,6 +154,10 @@ $border-gradient: 5px solid linear-gradient(to bottom, red, black);
   margin: 0 0 10px;
   border: $border-textbox;
 }
+.option2{
+  font-family: "SVN-Book Antiqua";
+  font-size:16pt;
+}
 /* option3 */
 .bg-option3{
   float: left;
@@ -157,6 +165,10 @@ $border-gradient: 5px solid linear-gradient(to bottom, red, black);
   background-size:70%;
   background-repeat: no-repeat;
   background-position: center;
+}
+.option3 p{
+  font-family: "SVN-Book Antiqua";
+  font-size: 14pt;
 }
 .content.option3 .row{
   width: 100%;
@@ -211,7 +223,22 @@ $border-gradient: 5px solid linear-gradient(to bottom, red, black);
 }
 
 /* option5 */
-
+.content.option5{
+  position: relative;
+}
+.content.option5::after{
+  content:"";
+  position: absolute;
+  width: 100%;
+  height: 1038px;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  background:url('./image/page27-bg.png');
+  background-size:65%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .bg-option5{
   height: 1038px;
   width: 100%;
@@ -246,6 +273,213 @@ $border-gradient: 5px solid linear-gradient(to bottom, red, black);
   font-size:52pt;
   color: $color-main;
 }
+
+/* option6 */
+.content.option6{
+  position: relative;
+}
+.content.option6::after{
+  content:"";
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 1038px;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  background:url('./image/page27-bg.png');
+  background-size:65%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.bg-option6{
+  height: 1038px;
+  width: 100%;
+  background:url('./image/page5.png');
+  background-size:100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 39.5px;
+}
+.content.option6 .row:first-child{
+  height: 223.12px;
+  width: 100%;
+  background:url('./image/page5-f1.png');
+  background-size:100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.content.option6 .row:first-child .col{
+  width: 232px;
+  height: 98px;
+  margin: 61.5px 17.5px;
+  overflow: hidden;
+}
+.content.option6 .row:last-child .col{
+  min-width: 352px;
+  height: 157px;
+  overflow: hidden;
+  margin: 64px 27.25px 55.5px;
+}
+.content.option6 .row:last-child{
+  height: 554.6px;
+  width: 100%;
+  background:url('./image/page5-f2.png');
+  background-size:100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display:grid;
+  grid-template-columns:406.5px 406.5px;
+  grid-template-rows: 263px 263px;
+  column-gap:37px;
+  row-gap: 28.6px;
+}
+.option6.content .row .col p {
+  text-align: center;
+  // line-height:98px;
+  font-family: "SVN-Book Antiqua";
+  font-weight: 700;
+  font-size:52pt;
+  color: $color-main;
+}
+.option6.content .row:last-child .col p {
+  font-size:36pt;
+}
+/* option7 */
+.content.option7 .row:first-child{
+  width: 100%;
+  display:flex;
+  justify-content:space-between;
+}
+.option7 p{
+  // color: #48362e;
+    font-family: "SVN-Book Antiqua";
+    font-size:16pt;
+    // font-weight: bold;
+}
+.content.option7 .row:first-child .col:first-child p::before {
+  content: open-quote;
+}
+.content.option7 .row:first-child .col:first-child p::after {
+  content: close-quote;
+}
+.content.option7 .row:first-child .col:last-child p::before {
+  content: "(";
+}
+.content.option7 .row:first-child .col:last-child p::after {
+  content: ")";
+}
+/* option8 */
+p.name,p.datebirth{
+  text-align:center;color: #0e3849;
+  font-family: "SVN-Book Antiqua";
+  font-size:20pt;
+}
+p.name span span:last-child,p.datebirth span span:last-child{
+  font-weight: bold;
+}
+.content.option8{
+  position: relative;
+  height: 1038px;
+}
+.content.option8::after{
+  content:"";
+  position: absolute;
+  width: 100%;
+  height: 1038px;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  background:url('./image/page27-bg.png');
+  background-size:60%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.content.option8 .row:first-child{
+  display:flex;justify-content:space-between;
+  margin: 100px 20px 50px;
+  .col:first-child{
+    color: #007e7f;
+    font-family: "SVN-Berkshire Swash";
+    font-size:32pt;
+    font-weight: bold;
+    p{width: 100%;
+      white-space: nowrap;
+    }
+    p:last-child{
+      margin-left: 80px;
+    }
+  }
+}
+.content.option8 .row:last-child{
+  padding: 20px;
+  background-color: #007f7f46;
+  p{
+    color: #48362e;
+    font-family: "SVN-Book Antiqua";
+    font-size:16pt;
+    font-weight: bold;
+  }
+}
+.content.option8 .avatar{
+  width:150px;
+  height: 150px;
+  border: 5px solid #007e7f;
+  overflow: hidden;
+  position: relative;
+  left: -50%;
+  top: -25%;
+  img{
+    margin-top: -30px;
+    margin-left: -30px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    transform: rotate(-45deg)  ;
+    -webkit-transform: rotate(-45deg)  ;
+    -moz-transform: rotate(-45deg)  ;
+    -ms-transform: rotate(-45deg)  ;
+    -o-transform: rotate(-45deg)  ;
+}
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+
+/* option9 */
+.option9{
+  text-align: center;
+  .bg-option9{
+    height: 1033px;
+    background:url('./image/page1-bg2.png'),url('./image/page1-bg1.png');
+    // background: url('./image/page1-bg2.png');
+    background-repeat: no-repeat,no-repeat;
+    background-size: cover,100%;
+  }
+  p{
+    font-family:"SVN-Avo";
+    font-weight: bold;
+    text-align: center;
+    span{
+      background: rgb(242,237,174);
+      background: radial-gradient(circle, rgba(242,237,174,1) 0%, rgba(196,174,98,1) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  .frame__border{
+    border:5px solid;
+    border-image-slice: 1;
+    border-image-source: radial-gradient(circle, rgba(242,237,174,1) 0%, rgba(196,174,98,1) 100%);
+  }
+}
+
 //////////////////////////////////////////////
 .bg-gray{
   background:url('./image/background.png');
@@ -286,4 +520,5 @@ svg{
 @font-face{
   font-family: SVN-Avo;
   src: url('http://duongthao.edu.vn/public/era/SVN-Avo.ttf');
+  font-weight:bold;
 }
